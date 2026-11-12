@@ -1,0 +1,288 @@
+{
+  "model": "sentence-transformers/all-mpnet-base-v2",
+  "revision": "e8c3b32edf5434bc2275fc9bab85f82640a19130",
+  "condition": "sentence",
+  "seed": 20261112,
+  "permutations": 1999,
+  "unique_labels": 415,
+  "category_memberships": 418,
+  "pairs": 5723,
+  "category_level": {
+    "11": {
+      "sbert_cosine": {
+        "rho": 0.7545454545454545,
+        "p": 0.007282041008429152,
+        "n": 11
+      },
+      "feature_cosine": {
+        "rho": 0.2545454545454546,
+        "p": 0.4500365768888286,
+        "n": 11
+      },
+      "cx_features_universal": {
+        "rho": -0.11818181818181818,
+        "p": 0.7292847795197802,
+        "n": 11
+      },
+      "cx_features_own": {
+        "rho": 0.41818181818181827,
+        "p": 0.20057021703405048,
+        "n": 11
+      },
+      "cx_features_own_category": {
+        "rho": 0.48181818181818187,
+        "p": 0.13343383825682875,
+        "n": 11
+      },
+      "cx_features_own_uniform": {
+        "rho": 0.5,
+        "p": 0.11730680301423817,
+        "n": 11
+      },
+      "cx_sbert_own": {
+        "rho": 0.20000000000000004,
+        "p": 0.5554454421055853,
+        "n": 11
+      },
+      "cx_sbert_domain": {
+        "rho": -0.07272727272727274,
+        "p": 0.831716405381337,
+        "n": 11
+      },
+      "cx_sbert_global": {
+        "rho": 0.4090909090909091,
+        "p": 0.211545010342096,
+        "n": 11
+      }
+    },
+    "15": {
+      "sbert_cosine": {
+        "rho": 0.6,
+        "p": 0.018050087941499985,
+        "n": 15
+      },
+      "feature_cosine": {
+        "rho": 0.22142857142857136,
+        "p": 0.42771371901637,
+        "n": 15
+      },
+      "cx_features_own_category": {
+        "rho": 0.44999999999999996,
+        "p": 0.0923573749481225,
+        "n": 15
+      },
+      "cx_features_own_uniform": {
+        "rho": 0.5178571428571428,
+        "p": 0.04800407736655832,
+        "n": 15
+      },
+      "cx_sbert_own": {
+        "rho": 0.007142857142857141,
+        "p": 0.9798442277615982,
+        "n": 15
+      },
+      "cx_sbert_global": {
+        "rho": 0.1857142857142857,
+        "p": 0.5075409629336735,
+        "n": 15
+      }
+    }
+  },
+  "typicality": {
+    "11": {
+      "sbert_mean_cosine": {
+        "fisher_mean_rho": 0.2526253794692899,
+        "arithmetic_mean_rho": 0.24455743972651967,
+        "positive": 9,
+        "n": 11
+      },
+      "sbert_prototype_loo": {
+        "fisher_mean_rho": 0.2526253794692899,
+        "arithmetic_mean_rho": 0.24455743972651967,
+        "positive": 9,
+        "n": 11
+      },
+      "feature_family_resemblance": {
+        "fisher_mean_rho": 0.7239387209324273,
+        "arithmetic_mean_rho": 0.6867373828081724,
+        "positive": 11,
+        "n": 11
+      },
+      "human_similarity_to_others": {
+        "fisher_mean_rho": 0.6007082941558107,
+        "arithmetic_mean_rho": 0.5756111920539848,
+        "positive": 11,
+        "n": 11
+      },
+      "feature_prototype_cosine": {
+        "fisher_mean_rho": 0.4400213368885994,
+        "arithmetic_mean_rho": 0.38311136748360197,
+        "positive": 9,
+        "n": 11
+      },
+      "feature_PC1_signed": {
+        "fisher_mean_rho": 0.7159667508563475,
+        "arithmetic_mean_rho": 0.6760090927387922,
+        "positive": 11,
+        "n": 11
+      },
+      "feature_PC1_absolute": {
+        "fisher_mean_rho": 0.7159667508563475,
+        "arithmetic_mean_rho": 0.6760090927387922,
+        "positive": 11,
+        "n": 11
+      },
+      "feature_PC1_alignment": {
+        "fisher_mean_rho": 0.577542500756095,
+        "arithmetic_mean_rho": 0.5111737717633026,
+        "positive": 11,
+        "n": 11
+      },
+      "feature_contrast": {
+        "fisher_mean_rho": 0.7180815231964218,
+        "arithmetic_mean_rho": 0.6795417617611169,
+        "positive": 11,
+        "n": 11
+      }
+    },
+    "15": {
+      "sbert_mean_cosine": {
+        "fisher_mean_rho": 0.26710256399439397,
+        "arithmetic_mean_rho": 0.26070985512432293,
+        "positive": 13,
+        "n": 15
+      },
+      "sbert_prototype_loo": {
+        "fisher_mean_rho": 0.26710256399439397,
+        "arithmetic_mean_rho": 0.26070985512432293,
+        "positive": 13,
+        "n": 15
+      },
+      "feature_family_resemblance": {
+        "fisher_mean_rho": 0.6856400003918889,
+        "arithmetic_mean_rho": 0.6412585605124287,
+        "positive": 15,
+        "n": 15
+      },
+      "human_similarity_to_others": {
+        "fisher_mean_rho": 0.5177253696319437,
+        "arithmetic_mean_rho": 0.4825990714624516,
+        "positive": 15,
+        "n": 15
+      },
+      "feature_prototype_cosine": {
+        "fisher_mean_rho": 0.42261931085027765,
+        "arithmetic_mean_rho": 0.37254091980528287,
+        "positive": 13,
+        "n": 15
+      }
+    }
+  },
+  "H1": {
+    "sbert_cosine": {
+      "animal": 0.5494985477385005,
+      "artifact": 0.4720089808810995,
+      "difference": 0.077489566857401,
+      "p_exact": 0.012987012987012988
+    },
+    "feature_cosine": {
+      "animal": 0.7986540227247447,
+      "artifact": 0.7495393269541536,
+      "difference": 0.04911469577059113,
+      "p_exact": 0.12337662337662338
+    },
+    "human_similarity": {
+      "animal": 0.44857288056382494,
+      "artifact": 0.302044163615196,
+      "difference": 0.14652871694862896,
+      "p_exact": 0.004329004329004329
+    },
+    "cx_features_universal": {
+      "animal": 0.31980939441705597,
+      "artifact": 0.3421538577063185,
+      "difference": -0.02234446328926254,
+      "p_exact": 0.42857142857142855
+    },
+    "cx_features_own": {
+      "animal": 0.20305527929625974,
+      "artifact": 0.18758608416400355,
+      "difference": 0.015469195132256197,
+      "p_exact": 0.5064935064935064
+    },
+    "cx_sbert_domain": {
+      "animal": 0.12137491956216533,
+      "artifact": 0.14528896058020827,
+      "difference": -0.02391404101804294,
+      "p_exact": 0.25757575757575757
+    },
+    "cx_sbert_own": {
+      "animal": 0.09646909981290283,
+      "artifact": 0.10102672437177561,
+      "difference": -0.004557624558872778,
+      "p_exact": 0.5346320346320347
+    }
+  },
+  "H2": {
+    "animal": {
+      "n": 129,
+      "superordinate_cosine": 0.4968240602458804,
+      "subordinate_cosines": {
+        "bird": 0.5770712040332986,
+        "fish": 0.5281286392674626,
+        "insect": 0.5365730968603046,
+        "mammal": 0.5477087136014925,
+        "reptile": 0.5580110849299446
+      }
+    },
+    "artifact": {
+      "n": 166,
+      "superordinate_cosine": 0.3682154444259114,
+      "subordinate_cosines": {
+        "clothing": 0.5052092379782449,
+        "kitchen_utensil": 0.44783355512280415,
+        "musical_instrument": 0.5454210075019926,
+        "tool": 0.4105621285723379,
+        "vehicle": 0.4598106024671287,
+        "weapon": 0.4632173536440882
+      }
+    }
+  },
+  "baseline_max_absolute_error": 5.078160114635466e-13,
+  "leuven_commit": "5a519d4f63318dd8bc0322b8cc00a31c30ef5146",
+  "python": "3.12.13",
+  "device": "cpu",
+  "category_delta_sbert_minus_cx_11": {
+    "delta_rho": 0.8727272727272727,
+    "ci95": [
+      0.11373066261289463,
+      1.461556603773585
+    ],
+    "bootstrap_draws": 3000
+  },
+  "typicality_delta_sbert_minus_PC1_11": {
+    "mean_delta_rho": -0.4314516530122724,
+    "ci95": [
+      -0.5716512215653146,
+      -0.3081041536383075
+    ],
+    "n": 11,
+    "sbert_better": 0
+  },
+  "pairwise": {
+    "sbert_fisher_mean_rho": 0.2621510883458802,
+    "features_fisher_mean_rho": 0.6383092223506691,
+    "sbert_positive": 14,
+    "sbert_holm_significant": 8,
+    "n_categories": 15
+  },
+  "cx_sbert_vs_distance_share": {
+    "rho": 0.9636363636363637,
+    "p": 1.8520398640703128e-06,
+    "n": 11
+  },
+  "sbert_cosine_vs_cx_features_11": {
+    "rho": -0.045454545454545456,
+    "p": 0.8944269969053026,
+    "n": 11
+  }
+}

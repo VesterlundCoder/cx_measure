@@ -1,0 +1,1260 @@
+PhiMiSci
+Philosophy and the Mind Sciences | Vol. 7 | 2026
+
+Conceptual coherence
+Matías Osta-Vélez1, *
+Peter Gärdenfors2
+
+Abstract
+Within theories of concepts and categorization, a concept is considered coherent to the extent that it is perceived as a structured whole. Although this notion
+plays an important role in the study of conceptual processes such as categorization and reasoning, it has proven difficult to define and operationalize. In this
+paper, we propose a formal framework in which the coherence of a concept
+depends on the patterns of covariation among its properties. Combining the
+theory of conceptual spaces with ideas from Principal Component Analysis,
+we argue that the coherence of a concept can be estimated by how efficiently
+its features can be compressed into a simpler, lower-dimensional structure. We
+discuss how this view explains why natural kind concepts are generally seen
+as more coherent than artifact concepts, and why coherent concepts support
+stronger inductive inferences. Furthermore, we apply these ideas to the conjunction fallacy and propose that the drive for coherent representations can
+override probabilistic intuitions when reasoning about social categories.
+Keywords: Coherence • Concepts • Conceptual spaces • Principal component
+analysis
+
+1
+
+University of the Republic, Uruguay 2 Lund University, Sweden
+* Primary contact: matiasosta@gmail.com
+Osta-Vélez, M., & Gärdenfors, P. (2026). Conceptual coherence. Philosophy and the
+Mind Sciences, 7. https://doi.org/10.33735/phimisci.2026.12377
+
+© The authors. philosophymindscience.org. ISSN: 2699-0369.
+
+PhiMiSci | Vol. 7
+
+1
+
+Introduction
+
+The main task of our cognitive system is to organize the constant and enormously diverse flow of stimuli it is exposed to with limited computational
+and memory resources. It does this, in large part, by forming concepts that
+allow it to group diverse inputs into equivalence classes, thus transforming
+the overwhelming complexity of sensory data into manageable and useful
+units of knowledge. Concepts, in this sense, can be seen as cognitive structures that compress and simplify information by identifying and retaining
+the more relevant features of stimuli and discarding the less relevant ones.
+Although all concepts simplify information, not all do so with the
+same efficiency. For instance, the concept amethyst can be represented
+compactly because its instances have diagnostic features (purple hue and
+hexagonal prismatic shape) that make them immediately distinguishable
+in almost any context.1 Its superordinate, quartz, includes a much wider
+variety of instances, yet remains efficiently compressible: all members share
+the same relatively small set of salient dimensions, such as crystal structure and chemical composition, which are, despite their internal diversity,
+enough to distinguish them from other mineral categories. By contrast,
+categories with less rigid structure and weaker regularities are harder to
+compress, since greater exemplar diversity requires retaining more information. Consider, for example, the concept game, whose instances overlap
+on only a handful of dimensions, such as rules, number of participants, or
+scoring system, yet differ across many others, making them resistant to
+compact representation (Wittgenstein, 2009). Something similar occurs
+with very broad concepts, such as living being. The diversity of objects
+encompassed by this category and the wide range of possible dimensions
+that must be considered make the concept powerful in referential scope but
+limited in its ability to convey precise information. This, in turn, renders it
+less compressible and, as we will show later, less useful for reasoning and
+prediction.2
+1
+
+Throughout this article, we use small caps for referring to concepts and italics for
+referring to their properties or dimensions.
+2
+This relates to what is known in statistics and machine learning as the “curse of di-
+
+2
+
+Matías Osta-Vélez & Peter Gärdenfors
+
+In this paper, we argue that differences in how easily concepts can be
+compressed correspond to differences in their perceived unity or coherence.
+In other words, we propose that the conceptual system operates by reducing
+informational complexity by forming representations that are as compact
+as possible. The success of this process determines how coherent a concept
+appears when it is employed in language or reasoning.
+Discussing the coherence of concepts might not seem intuitive at first
+glance, since the vast majority of our lexicalized everyday concepts already
+have a certain degree of coherence. Indeed, the very fact that these concepts have stabilized in natural language (rather than being abandoned)
+signals some degree of inferential and predictive utility (Goodman, 1983).
+However, we can approach an intuitive or pre-theoretical understanding of
+this notion by comparing an ad hoc concept, such as things to save from
+a fire, with a natural kind concept, such as dog. The former, although not
+arbitrary, has only minimal structure since the items it groups together are
+highly diverse and the grouping itself may respond to idiosyncratic or personal criteria. The latter, by contrast, is a more robust and “non-accidental”
+concept; it has a prototypical structure, its members are not merely collected for some temporary purpose, and they share many features, making
+the concept inductively and informationally rich. Ultimately, the fact that
+we perceive some concepts in natural language as more robust and less
+arbitrary than others can be taken as evidence of our underlying intuitions
+about coherence.3
+Empirical research shows that coherence is an important factor in conceptual processes, especially in categorization and reasoning. For instance,
+people tend to rely on basic-level concepts such as dog or chair rather than
+broader ones like mammal or furniture when reasoning or categorizing,
+since they are more coherent due to how well they balance generality and
+informativeness (see Corter and Gluck, 1992). Another example comes from
+mensionality” (Bellman, 1961): as the number of relevant dimensions increases, the
+amount of information required to represent and generalize grows exponentially.
+3
+Indeed, Barsalou (1983) showed that ad hoc concepts are less established in memory
+than natural concepts and that this might well be due to the fact that they have
+weaker structural properties.
+
+PhiMiSci | Vol. 7
+
+the contrast between our representation of natural and artifact concepts.
+Natural concepts (e.g., mammal) are inductively rich because they have
+a robust and causally related feature structure (Rehder and Hastie, 2004;
+Brandone and S. A. Gelman, 2009), whereas artifact concepts (e.g., clock)
+offer less inductive support because their feature structure is more scattered and are perceived as less coherent. Social concepts show a similar
+effect, categories with more clearly defined and interconnected features
+(e.g., yacht club members) support stronger within‐category inferences
+than those with looser structures (e.g., county clerks) (Patalano et al.,
+2009).4
+Despite the valuable experimental work on the notion of coherence, we
+believe there are still some important theoretical gaps in our understanding
+of this concept. Existing accounts are primarily descriptive; they focus
+on the effects of coherence but do not explain why certain concepts show
+greater coherence than others or how such coherence emerges from underlying conceptual structures. In this article, we propose a new framework
+that understands conceptual coherence in terms of the covariational struc4
+
+Psychologists study conceptual coherence using a variety of experimental tasks.
+In some cases, they elicit relatively direct judgments about coherence by asking
+participants how “uniform,” “informative,” or “natural” a particular category is
+(Haslam et al., 2000). In other cases, they use indirect tasks such as property
+induction, feature listing, and explanation generation. Rehder and Hastie (2004),
+for example, use a property-induction task in which participants first learn a novel
+category, such as “Lake Victoria Shrimp,” together with causal relations among
+its features. They are then told that one exemplar has a new blank property, such
+as “having slightly acidic mucus,” and are asked to estimate what proportion of
+category members are likely to share that property. The results show that the
+property is projected more when the exemplar respects the causal structure of the
+category than when it does not. According to their view, coherence is a function of
+causal structure. In feature-listing tasks, participants are asked to name as many
+“essential” features of a category as they can, assuming that coherent categories
+support richer descriptions (e.g., Patalano et al., 2006). In explanation-generation
+tasks, participants are asked to explain why a member of a category has a particular
+property or preference. The idea here is that members of coherent categories invite
+deeper explanations than members of less coherent categories (e.g., Patalano et al.,
+2003).
+
+Conceptual coherence
+
+3
+
+ture of concepts, that is, how clusters of properties systematically co-occur
+across category exemplars. For example, in the concept bird, the consistent
+covariation between beak shape and feeding habits across species illustrates
+this idea. The greater the covariance observed within a concept’s feature
+space, the stronger its perceived coherence. By combining the theory of
+conceptual spaces with principal component analysis (PCA), we show that
+the perceived coherence of a concept is related to the ease with which
+its attribute structure can be reduced to simpler representations. At the
+same time, we propose a strategy for measuring coherence and discuss its
+relationship with inductive reasoning.5
+The remainder of this paper is organized as follows. Section 2 looks
+at earlier ideas about conceptual coherence, including the similarity-based
+and theory-theory approaches, and discusses Paul Thagard’s constraintsatisfaction model. It also introduces the theory of conceptual spaces and
+advances the proposal that coherence depends on the covariational structure of concepts. Section 3 presents a measure for quantifying coherence
+based on principal component analysis (PCA). Section 4 examines the relationship between coherence and causality and discusses how our account
+explains the role of coherence in inductive reasoning. Section 5 extends
+the analysis to social concepts and illustrates how coherence influences
+probabilistic judgments, paying special attention to the conjunction fallacy.
+
+5
+
+In this article, we focus solely on the problem of coherence within what we call
+‘object concepts.’ These are concepts that represent collections of entities denoted
+by a noun or phrasal nominal (e.g., “dog,” “old lawyer,” “things to take to the beach”).
+They differ from properties or attributes, typically linked to adjectives in natural
+languages, and from abstract concepts (e.g., “freedom,” “dignity,” “inflation”) that
+cannot be easily analysed in terms of dimensions. As a notational criterion for the
+remainder of this article, we will use small caps for concepts and italics for their
+properties or attributes.
+
+PhiMiSci | Vol. 7
+
+2
+
+The nature of conceptual coherence
+
+2.1
+
+Previous models of coherence
+
+In cognitive psychology, there are two main ways to explain conceptual
+coherence. The first builds on the notion of similarity and suggests that
+a concept is perceived as coherent when its instances share many features, forming a ‘natural grouping.’ In other words, greater within-category
+similarity induces stronger perceived coherence. Rosch and Mervis (1975)
+illustrate this view in their explanation of why basic-level concepts are
+considered the most ‘cognitively natural’ and are consistently preferred in
+tasks such as induction and categorization. The exemplars of these basiclevel concepts are very similar to each other and clearly different from
+members of other groups. This creates a good balance between generality,
+which is the range of examples included, and informativeness, which is how
+much the members share properties that help us make useful inferences.
+This balance is supposed to promote efficient reasoning.
+However, this approach has limitations (Lassaline and Murphy, 1996).
+In particular, similarity understood as a flat sum of shared properties fails
+to capture the fact that certain dimensions of a concept are more important
+than others and, consequently, some properties will carry more weight
+than others when making similarity judgments. For example, within the
+concept mammal, dog may be judged more similar to wolf than to cat if
+the dimension physical appearance is emphasized, but this will be reversed
+if a greater weight is assigned to the dimension domestication. In general,
+any theory of coherence based on similarity should include a mechanism
+for estimating the relative weights of a concept’s dimensions, and the
+aforementioned view fails in this regard.6 Furthermore, and perhaps more
+6
+
+As we will see later, the theory of conceptual spaces also grants a central role
+to the notion of similarity and, in this sense, must also address the problem of
+dimensional weights. However, we believe that this theory has better tools to
+do so than traditional theories. In particular, an advantage of conceptual spaces
+over Rosch and Mervis’s theory is that the weights can be integrated directly into
+the formalism, since the function estimating semantic similarity is a weighted-
+
+4
+
+Matías Osta-Vélez & Peter Gärdenfors
+
+importantly, as Medin and Wattenmaker (1987) argue, this approach needs
+to account for the fact that the dimensions of a concept are often correlated,
+and that this contributes to the concept’s global coherence (see also R.
+Gelman and Williams, 1998).
+The second approach to conceptual coherence addresses some of the
+limitations of the similarity-based view by positing that concepts are
+grounded in ‘intuitive theories’ (Murphy and Medin, 1985; Gopnik and
+Meltzoff, 1997). An intuitive theory is “a system of interrelated concepts
+that generate explanations and predictions within a specific domain of
+experience” (Slaughter and Gopnik, 1996, p. 2967). These theories offer a
+solution to the problem of the relative weights of a concept’s dimensions
+and, consequently, use a more robust notion of similarity than the previous
+account. Furthermore, the notion of causality plays an important role in
+this perspective, as it allows for an explanation of the correlations between
+properties. For instance, in a naive theory of fish, features like gills, fins,
+and a streamlined body are understood as causally related and as enabling
+the explanation of other properties, such as swimming. The principal advantage of this approach over the previous one is that, by embedding concepts
+within networks of causal relations, intuitive theories account for why
+certain features ‘hang together’ in a coherent way (see Murphy and Medin,
+1985).
+This approach, known as “theory-theory,” is popular in psychology
+for its broad explanatory scope, but it also has important limitations. First,
+the hypothesized intuitive theories seem more complex than the conceptual phenomena they purport to explain: to possess a theory, the person
+distance function. This is especially relevant in cases where dimensional weights
+are determined experimentally. Furthermore, there exists (at least) one recent
+model developed within the framework of conceptual spaces (Osta-Vélez and
+Gärdenfors, 2026) that explains how these dimensional weights are actually learned.
+Roughly put, the idea of the model is that a specialized attention mechanism assigns
+weights by calculating the ratio of between-category variation to within-category
+variation for each dimension during the acquisition of various concepts within
+the same semantic domain. Ultimately, we believe that conceptual spaces are
+better positioned than classical similarity-based theories to address the problem of
+dimensional weights.
+
+PhiMiSci | Vol. 7
+
+must first have knowledge of several causal dependencies and explanatoryrelated patterns, along with numerous prior conceptual representations,
+each plausibly with its own associated theory. Second, the origins and
+developmental histories of naive theories remain unclear (Sloutsky, 2003)
+and, even if we grant that concepts are embedded in intuitive theories, we
+still need an account of how such theories arise. Finally, we know from
+philosophy of science that multiple theories can account for the same set of
+observations (Turnbull, 2018). To deal with this problem, scientists rely on
+metatheoretical principles (e.g., simplicity) to choose between alternative
+theories. However, in the case of individual psychology, it is not clear why
+people would naturally tend to adopt certain intuitive theories (such as an
+intuitive biology for classifying organisms) rather than alternative theories
+that explain the same facts but highlight different causal relationships. In
+summary, the two most influential approaches to conceptual coherence
+face considerable limitations (a more recent alternative that focuses on
+causality will be discussed later).
+Turning to formal models, the most influential proposal is Paul Thagard’s (2002) model, which is part of a broader framework intended to
+incorporate various cognitive elements, including not only concepts but
+also beliefs, hypotheses, percepts, and propositions, into coherence relations.7
+According to Thagard, coherence problems can be formulated as constraint satisfaction problems. The problem begins with a set 𝐸, whose elements can be linked by coherence or incoherence relations. Coherence
+relations between elements (𝑒𝑖 , 𝑒𝑗 ) in 𝐸 are represented as ‘positive constraints’ in a set 𝐶 + , while incoherence relations are represented as ‘negative
+constraints’ in a set 𝐶 − . Each constraint is assigned a weight 𝑤𝑖𝑗 reflecting
+its relative importance in the problem. The goal is to identify a subset of
+elements from 𝐸 that maximizes the satisfaction of constraints, effectively
+7
+
+Many probabilistic models of coherence have been developed within formal epistemology (see, for example, Douven and Meijs, 2007 and Hartmann and Trpin, 2026).
+However, these models focus on something different from what we are interested
+in here. They are designed to measure the coherence of sets of propositions, not
+the coherence within the internal structure of categories.
+
+Conceptual coherence
+
+5
+
+yielding the most coherent arrangement of elements.
+To achieve this, 𝐸 is partitioned into two subsets: A subset 𝐴, containing
+accepted elements, and a subset 𝑅 containing rejected elements. The weight
+of the partition 𝑤(𝐴, 𝑅) is calculated as the sum of the weights of the
+satisfied constraints. A constraint is considered satisfied if, for any element
+pair (𝑒𝑖 , 𝑒𝑗 ) in 𝐶 + or 𝐶− , the following holds:
+𝑒𝑖 ∈ 𝐴 iff 𝑒𝑗 ∈ 𝐴 or,
+𝑒𝑖 ∈ 𝑅 iff 𝑒𝑗 ∈ 𝑅.
+
+The coherence problem is resolved when the partition with the maximum
+weight is identified.
+To illustrate how this model works, consider the coherence evaluation
+of two concepts of water-dwelling animals, each described by the following
+sets of properties (Murphy and Wisniewski, 1989):
+Concept 1: lives in water, eats fish, has many offspring, and is small.
+Concept 2: lives in water, eats wheat, has a flat end, and is used for
+stabbing bugs.
+
+The properties of Concept 1 align quite naturally: aquatic animals often
+eat fish, are small, and produce many offspring. These relationships reinforce one another and would form positive constraints with each other.
+By contrast, Concept 2 contains conflicting and unrelated properties. For
+example, lives in water and eats wheat clash, as aquatic animals rarely
+consume wheat, while has a flat end and is used for stabbing bugs lack
+any clear connection. These conflicts fragment the category and reduce its
+coherence.
+When applying Thagard’s model, Concept 1 would yield a higher coherence score because most of its properties could be placed in the ‘accepted’
+set A, satisfying numerous positive constraints. Concept 2 would struggle
+to achieve a coherent partition due to its contradictory and disconnected
+properties, resulting in more violated constraints and thus lower coherence.
+The constraint satisfaction model has been implemented in connectionist networks and applied to a range of domains (for example, Thagard
+
+PhiMiSci | Vol. 7
+
+et al., 2002); however, we do not believe it provides a sufficient account of
+conceptual coherence. The main issue is its lack of specificity regarding
+the nature of the relationships between a concept’s components that determine its overall coherence. In other words, the model does not explain
+why the features of a concept (the elements in 𝐸) enter into relationships
+of coherence or incoherence (a shortcoming that stems from Thagard’s
+failure to explicitly define the constraints in sets 𝐶 + or 𝐶− ). Additionally,
+the model is ambiguous about the kinds of entities that can enter coherence
+relations. The elements in 𝐸 can represent a single concept and its internal
+features (as in the approach we will propose) or a set of thematically related
+concepts, such as dog-leash-veterinarian. The type of conceptual coherence we analyze, which is the one commonly used in cognitive psychology,
+is restricted to cases of the former type.
+In what follows, we introduce the basic ideas behind conceptual spaces.
+This theory will allow us to build a more precise and comprehensive account
+of conceptual coherence; one that overcomes the limitations identified in
+Thagard’s approach.
+
+2.2
+
+A new proposal: Conceptual spaces,
+heterogeneity, and coherence
+
+2.2.1 Conceptual spaces
+As we said in the introduction, the core of our proposal is that conceptual
+coherence is related to the ‘covariational structure’ of concepts, that is, the
+extent to which their properties systematically co-occur across exemplars.
+A further central claim of this article is that, among existing theories of
+concepts, the theory of conceptual spaces (Gärdenfors, 2000, 2014) provides
+the most suitable framework for developing this account.
+According to this theory, concepts are represented as regions in a multidimensional space, with each axis corresponding to a ‘quality dimension’
+that encodes a specific aspect of the concept. For example, in the concept
+fruit, relevant dimensions might include color, size, taste and texture. Some
+dimensions can be specified independently of others, as in the case of color
+
+6
+
+Matías Osta-Vélez & Peter Gärdenfors
+
+and size in this example, while others can only be meaningfully specified
+together, such as hue and its intensity when we try to represent colors. The
+former are called ‘separable’ dimensions, and the latter ‘integral’ dimensions (cf. M. Jones and Goldstone, 2013). Any set of integral dimensions
+that is separable from any other dimension is called a domain.
+The theory of conceptual spaces makes a distinction between ‘properties’ and ‘concepts.’ Properties, such as the color red, are convex regions within a single domain (in this case, the color domain) and are
+considered the simplest form of conceptual representation. In contrast,
+concepts cover several separate dimensions and domains and are represented as convex regions in the aggregate space of those domains. The
+dimensions and domains that constitute a concept often vary together. For
+example, in the concept fruit, dimensions such as size and weight, as well
+as ripeness, color, and taste, usually vary together. These patterns generate
+expectations that help us make inferences; in other words, knowing one
+property of an exemplar can help predict others (Osta-Vélez and Gärdenfors,
+2020, 2022).
+Within this framework, an instance of a concept (i.e., a particular object)
+is represented by a point in a multidimensional space, and the similarity
+between two instances is a monotonically decreasing function of their distance in this space. It is common to assume that the metric of the space is
+Euclidean, although other metrics may be used if the context requires it
+(Shepard, 1964; Johannesson, 2002; Gärdenfors, 2014). Representing exemplars as points, properties as convex regions within single domains, and
+concepts as convex regions spanning multiple domains provides a mathematically precise way to capture multiple conceptual processes within a single formal framework. Crucially, as we will see later, this formal framework
+provides tools for analyzing statistical aspects of conceptual representation,
+which will be fundamental to our analysis of coherence.
+
+2.2.2 Heterogeneity and coherence
+Now, how can this theory help us elucidate the notion of coherence? In the
+introduction, we explained that the coherence of a concept refers to the
+
+PhiMiSci | Vol. 7
+
+degree to which the diversity of its exemplars is nonetheless perceived as
+“unified”: the more diverse the members of a category, the harder it is to
+achieve that unity. Psychologists call this overall dispersion of variation
+the heterogeneity of a concept (S. A. Gelman, 2003; Brandone, 2017). Within
+conceptual spaces, the heterogeneity of a concept corresponds to the volume
+of the region representing the concept in the space: the larger the volume,
+the greater the variability of its instances.
+Heterogeneity is directly related to the uncertainty we face when
+reasoning about new instances of a category. For instance, when we learn
+that an object is a pipe wrench, the strong similarity among its instances
+in terms of shape, function, and materials allows us to predict many of its
+properties with confidence; whereas learning that an object is a handbag
+leaves much greater uncertainty due to the wider variation in size, material,
+shape, and purpose that this concept involves. In general, the narrower and
+more specialized the concept, the more specific and reliable the inferences
+it supports (cf. Thagard and Nisbett, 1982; Sloman and Lagnado, 2005;
+Brandone, 2017). In conceptual spaces, this idea can be expressed more
+or less straightforwardly. When we categorize an object, we place it as a
+point within the region that represents a concept. The area of this region is
+a function of the range of properties the object might possess (the larger
+the space, the more possibilities exist). As we learn new properties of the
+object or sort it into a more specific concept, we narrow this region, thus
+shrinking the space of possibilities and reducing our uncertainty about its
+unknown properties.
+Yet, heterogeneity does not fully determine the inductive power of
+concepts. A concept can occupy a large area of a conceptual space (i.e., it
+encompasses a wide range of variation) and still be highly informative if
+its properties are strongly interconnected. In other words, if the properties
+covered by a heterogeneous concept covary, such that knowing one of
+them allows me to infer others, then the uncertainty associated with that
+concept can be reduced and property induction facilitated. This is the key
+point of our analysis of coherence: it concerns not the amount of variation
+a category exhibits (its heterogeneity) in isolation, but the way in which
+that variation is organized. To formalize this, we propose measuring the
+
+7
+
+Conceptual coherence
+
+coherence of a concept by estimating the extent to which the total variance
+of a concept can be explained in terms of a minimum number of covarying
+dimensions, which will reflect the extent to which its properties “move
+together” in conceptual space.
+The covariational patterns we refer to are evident in animal categories. For example, an animal’s body size often covaries with attributes
+such as lifespan, diet, and habitat; the fact that larger mammals generally
+live longer than insects illustrates this. Similarly, the specific shape of a
+bird’s beak is a cue to multiple correlated attributes like diet, habitat, nesting behavior, and even mating calls. Research by Younger (1990), Billman
+and Knutson (1996), and Hayes et al. (1996) shows that humans excel at
+detecting such covariations across many domains. It seems reasonable to
+assume that this has an evolutionary explanation. Recognizing patterns in
+the environment is crucial for the survival of individuals, aiding in predicting potential dangers and identifying food sources and possible shelters.
+The result has been the development and refinement of an innate ability to
+group sets of properties that covary. This idea is consistent with Rosch’s
+(1975) prototype theory, which highlights basic-level concepts as important
+clusters of features that often co-occur (Holland et al., 1986, pp. 183–4).
+The question that emerges from the previous discussion is the following: which cognitive mechanisms represent these covariations and how
+might they work? We speculate that the detection of correlated features
+might function similarly to principal component analysis (PCA). In the
+next section, we explore how PCA can systematically capture and quantify
+these covariations.
+
+PhiMiSci | Vol. 7
+
+3
+
+Principal component analysis as a
+measure of conceptual coherence
+
+3.1
+
+Principal component analysis and conceptual
+coherence
+
+PCA is a statistical method for data analysis that reduces the complexity
+of a dataset while preserving as much of its structure as possible. Broadly
+speaking, PCA takes a set of observations (or ‘data points’) represented
+in an n-dimensional space and returns a set of m orthogonal dimensions
+(with m ≤ n), also referred to as ‘principal components’, which account for
+the maximum possible variance of the original data.
+One way to visualize this process is to imagine a cluster of points
+in a high-dimensional space, each representing an exemplar defined by
+many features. What PCA does is analogous to ‘rotating’ this cluster to
+find the axis along which the cloud of points spreads the most; this is the
+direction that defines the first principal component and which captures the
+largest portion of the total variation. Because the first principal component
+captures the largest portion of overall variation, the proportion of variance
+it explains indicates how strongly the features covary. In other words, the
+more variance accounted for by this first principal component, the more
+coherent (or systematically interrelated) the cluster of points is. Subsequent
+principal components, orthogonal to the first, capture progressively smaller
+portions of the remaining variance (see Figure 1).
+PCA is widely used as a dimensionality reduction technique in areas
+such as machine learning, pattern recognition, or data visualization. When
+datasets have too many variables, PCA can reduce their dimensionality
+while preserving the most crucial information. We find it plausible to
+assume that this same principle is used in concept representation, which
+typically includes a large number of exemplars represented along a large
+number of dimensions. More specifically, we propose that the coherence of
+a concept can be estimated by the proportion of total variance explained
+by the first principal component(s). In a conceptual space, the instances
+of a concept appear as points that may cluster more or less tightly; by
+
+8
+
+Matías Osta-Vélez & Peter Gärdenfors
+
+Figure 1: Illustration of principal component analysis (PCA). The cloud of points
+
+represents correlated data. The red arrows show the principal components: PC1
+captures the direction of greatest variation in the data, while PC2 captures the
+remaining variation, orthogonal to PC1.
+
+identifying the main axis of variation, PCA provides a plausible way to
+evaluate how structured the concept is. For concepts with a robust structure,
+the PCA will account for most of the concept’s variance in the first (or first
+few) principal components, and the concept will be perceived as highly
+coherent. Conversely, when a concept has exemplars significantly dispersed
+throughout the feature space, the PCA will result in the variance being
+distributed across multiple components. This indicates that the concept
+
+PhiMiSci | Vol. 7
+
+9
+
+Conceptual coherence
+
+cannot be efficiently compressed and, consequently, will be perceived as
+having low coherence.
+
+3.2
+
+An illustrative example
+
+As an illustrative example, let us assume that the concept strawberry can
+be represented by merely three dimensions: color, taste, and size. Suppose
+a number of observations of strawberries result in the dataset depicted
+in Figure 2. The first principal component of the set is the long vector
+that extends diagonally upward to the right from the mean of the dataset.
+Orthogonal to that vector, we find a shorter vector representing the second
+principal component and an even shorter vector representing the third
+principal component. In this example, the first principal component captures considerably more variance than the other two combined and can be
+used to re-express the data in an efficient manner without significant loss
+of information. The dimension identified by the first principal component
+can be interpreted as a representation of the ‘ripeness’ of the strawberries.
+Note that the very fact that we can consistently discuss ripeness in fruits
+indicates that language encodes lexical concepts that refer to multivariate
+structures as if they were single properties. In essence, the use of this type of
+multifaceted descriptor promotes communicative and cognitive efficiency;
+compressing diverse information into a single term allows language users to
+convey and understand complex ideas without getting distracted by details.
+This approach is consistent with the principle of information economy,
+which aims to communicate the greatest amount of information with the
+least amount of effort.8
+8
+
+For a closer look at the role of informational economy in communication, see, for
+example, Égré et al. (2023). A number of papers have explored this same topic in
+relation to concept formation and conceptual structure. For instance, Gärdenfors
+and Osta-Vélez (2026) discusses the role of information compression for explaining
+concept essentialism. Martínez (2024) proposes that categorization can be understood as a data-compression mechanism that aims at finding a balance between
+informational accuracy and low cognitive cost. Finally, Chater and Vitányi (2003)
+discuss the crucial role of simplicity across multiple cognitive domains, including
+categorization.
+
+Figure 2: An illustration of the first principal components of a data set.
+
+In summary, this example shows how identifying patterns of covariation within a concept increases its perceived coherence. In more complex
+concepts, different clusters of covarying features may emerge and, consequently, new principal components encoding them. In general, the more
+variance that can be expressed in fewer principal components, the more
+compressible the concept will be and, therefore, the more cohesive it will
+be.
+It is important to note that the idea that our cognitive system operates
+by compressing and simplifying the vast amount of information it deals
+
+PhiMiSci | Vol. 7
+
+with is not new. Edelman and Intrator (1997) have argued that one of the
+central functions of learning is to extract low-dimensional representations
+from high-dimensional input spaces. According to them, perceptual and
+conceptual learning alike can be understood as processes of dimensionality
+reduction, in which the system identifies a small set of latent variables that
+explain most of the variation in the data, thereby enabling both efficient
+storage and generalization. Another example comes from the study of
+memory, where the notion of dimensionality reduction is regularly used.
+Kerrén et al. (2025), for instance, propose that episodic memory relies on
+the compression of high-dimensional information about our experiences
+into simpler representations that can be retrieved with relative ease. This
+compression is supposed to reduce interference among stored memories
+while preserving the relational structure needed for flexible retrieval.
+
+3.3
+
+Salience, covariance and a measure of
+coherence
+
+The use of formal methods in psychology often poses challenges because
+the phenomena under study rarely fit neatly into the formal structures
+intended to model them. An important challenge in using PCA to analyze
+conceptual representation is that, in its standard form, all dimensions are
+treated as equally relevant. But, as noted in Section 2.1, our representation
+of concepts always involves weighted dimensions of varying psychological
+relevance. For example, in the concept dog, attributes like size or coat
+are typically more influential than features such as body temperature. To
+address this problem, we now examine in more detail how PCA works and
+propose a way of incorporating salience weighting to more realistically
+reflect the internal structure of a concept.
+The standard method for applying PCA is as follows (Jolliffe, 2002).
+First, the (continuous) variables of the original dataset are standardized to
+prevent specific dimensions from dominating the analysis due to differences
+in scale. Second, a correlation matrix is computed to capture how pairs
+of variables vary together, allowing for the identification of potential
+correlations among dimensions. Finally, the eigenvectors and eigenvalues
+
+10
+
+Matías Osta-Vélez & Peter Gärdenfors
+
+of this matrix are calculated in order to determine the principal components;
+each eigenvector defines a direction of variance, while its corresponding
+eigenvalue indicates the magnitude of that variance. The main components
+are then ordered by their related eigenvalues, with the first main component
+explaining the most variation in the dataset.
+The problem lies in the first step, since standardization treats all dimensions as equally relevant. To avoid this, we propose weighting the data for
+each dimension (i.e., multiplying it by a weight vector) before calculating
+the covariance matrix, so that the model reflects the relative psychological
+salience of each attribute. This adjustment allows psychologically salient
+dimensions to ‘guide’ the analysis, rather than letting dimensions with high
+numeric variance but low importance take over the calculation.
+It is important to note that covariance measures require a reference
+point because they are based on deviations from that point. Standard PCA
+implicitly uses the mean as this reference when standardizing data. However, since we reject standardization precisely because dimensions differ in
+psychological importance, we must explicitly choose a ‘cognitively meaningful reference.’ To do this, we introduce the idea of a universal prototype
+(representing the prototype of ‘thing’) which we represent by the mean
+of the positions of all objects. This universal prototype serves as a more
+nuanced reference for understanding how different features relate within
+a concept. We take the universal prototype to serve as the origin of the
+conceptual space. The role of the universal prototype becomes particularly
+clear when considering concepts that exhibit little or no variation in most
+of their dimensions. Even when individual dimensions do not correlate
+strongly, covariance remains meaningful because it is assessed relative to
+the entire conceptual space. Many animal concepts, for example tiger,
+illustrate this point. For such categories, there will be little or no direct
+correlation between their dimensions, yet their overall covariance structure
+remains stable when measured against the universal prototype. This is
+the reason why we use covariance rather than correlation to determine the
+coherence of a concept.
+With this framework in place, we can now introduce a measure of
+conceptual coherence. Given a set of exemplars of a concept X and its
+
+PhiMiSci | Vol. 7
+
+11
+
+salience‐weighted covariance matrix Σw , we apply PCA to Σw to obtain
+eigenvalues 𝜆1 , 𝜆2 , … , 𝜆𝑑 ordered from largest to smallest. These eigenvalues quantify the variance explained by each principal component. Let
+𝑝𝑖 =
+
+𝜆𝑖
+𝑑
+∑𝑗=1 𝜆𝑗
+
+be the proportion of the total variance explained by the 𝑖𝑡ℎ principal
+component. We then define the coherence score of X as
+𝑑
+
+𝐶𝑋 = ∑ 𝑤𝑖 𝑝𝑖
+𝑖=1
+
+where the 𝑤𝑖 are positive weights that decrease geometrically with
+𝑖−1
+i (e.g., 𝑤𝑖 = (1 − 𝑟)𝑟 for some 0 < 𝑟 < 1) and are normalized such
+𝑑
+that ∑𝑖=1 𝑤𝑖 = 1. This particular weighting ensures that earlier principal
+components (those capturing the most psychologically relevant variance)
+contribute proportionally more to the score, while later components have
+a progressively smaller influence. For highly coherent concepts, in which
+most variance is captured by the first few components, 𝐶𝑋 will be high,
+but for less coherent concepts whose variance is distributed more evenly
+across many components, the weighted sum will result in a lower score.
+
+3.4
+
+Some properties of this coherence measure
+
+We can now examine the five key features that shape our coherence measure.
+First, the measure is dependent on the salience values of the domains. If a
+domain has low salience, then all volume related to it will be small, and,
+consequently, its contribution to the total coherence of the concept will be
+small. For example, consider reclassification of the concept whale from
+fish to mammal. In earlier taxonomical systems, the ecological domain
+(living in water) was more salient than key ‘biological’ properties such as
+warm-bloodedness, live birth, and milk production (Gärdenfors, 2000, Section
+6.4). However, by shifting salience toward these biological dimensions and
+away from purely ecological ones, whale became better aligned with the
+
+Conceptual coherence
+
+core properties of mammal. This shift improved the internal consistency of
+the concept, thereby improving its overall conceptual coherence.
+Second, this measure is statistical, not probabilistic. It is defined for any
+distribution of points in the space, independently of probabilities. We do
+not assume that cognitive agents calculate probabilities when estimating
+conceptual coherence. More broadly, our proposal could be understood as
+statistical or data-driven since it builds on the idea that agents extract relational patterns from their experience representing instances in a conceptual
+space.
+Third, concepts that contain many salient dimensions that covary will
+be seen as more coherent than those that contain fewer such dimensions.
+This helps explain why natural categories are coherent, as they usually
+contain several salient dimensions that covary. In contrast, artifact categories have few salient dimensions (in many cases, only function is salient)
+and do not necessarily covary with other dimensions. Consequently, their
+dimensions exhibit weaker covariance, leading to lower coherence.
+Fourth, even among concepts with multiple salient dimensions, coherence increases further when these dimensions form tightly interrelated
+clusters of properties. This dense clustering is common in natural concepts
+and it helps to explain why they are easier to learn than artifact concepts
+(Billman and Knutson, 1996; Kornblith, 1993; Shipley, 1993).
+Fifth, it follows from our definition that superordinate concepts are
+less coherent than their subordinates; even though their broader scope
+can exhibit higher pairwise covariation, the large volume disperses variance across many principal components, so the first few capture a smaller
+proportion of the total.
+It might be objected that, since distances in conceptual spaces represent
+similarity, our proposal is subject to the criticism against similarity account
+of coherence that we presented in section 2.1. However, we avoid the
+arbitrariness of similarity by assuming that weights are assigned to the
+dimensions before coherence is measured. A consequence of this approach
+is that there is a certain context dependence of the coherence of a concept
+depending on the assignment of weights. Our example of the change in the
+concept whale illustrates this.
+
+PhiMiSci | Vol. 7
+
+We have shown that PCA, when modified to incorporate dimensional
+salience and a universal reference point, offers a method for estimating
+conceptual coherence. This framework helps explain key cognitive phenomena, such as why natural kind concepts tend to be more coherent than
+artifacts and why concepts with tightly clustered properties are easier to
+learn. In the following section, we explore how coherence relates to causal
+knowledge and its role in inductive reasoning.
+
+4
+
+Coherence, causality, and induction
+
+4.1
+
+Coherence and causality
+
+Some researchers have argued that coherence cannot be fully explained
+by covariational learning alone and suggest that causal knowledge plays
+a central role instead. In a series of experiments, Malt and Smith (1984)
+and Ahn et al. (2002) found that typicality judgments (i.e., assessments
+of how representative an exemplar is of a given concept) were stronger
+when the exemplar contained pairs of causally related properties. Focusing
+on the concept bird, they presented to subjects descriptions of exemplars
+that shared general features like having wings but differed in other specific
+properties: some exemplars had the properties lives near the ocean and
+eats fish, while others had is white and eats fish. Although both property
+pairs exhibited similar covariation, participants rated exemplars with lives
+near the ocean and eats fish as more typical, perceiving these properties as
+causally linked. The researchers concluded that semantic judgments depend
+not only on pairwise covariation but also on causal relationships, a finding
+consistent with ideas from the theory-theory, particularly its interpretation
+of conceptual coherence.
+There is, however, an alternative explanation of these results (see also
+Rogers and McClelland, 2004). It is possible that subjects perceive two
+features as causally associated, and weight them more heavily in their
+typicality judgments, because both belong to larger clusters of correlated
+
+12
+
+Matías Osta-Vélez & Peter Gärdenfors
+
+properties that are present in many exemplars of a concept. In most shorebirds, for instance, lives near the ocean and eats fish co-occur with properties
+such as can swim, has long legs, and has a long neck. By contrast, properties
+like is white and eats fish are more dispersed within bird, since they appear
+in highly dissimilar birds; the white tern, for example, is white and eats
+fish yet has no physical resemblance to most shorebirds. As a consequence,
+the perceived coherence between two properties could stem from their
+covariation with the other properties of the concept, which is what the first
+principal components capture. The asymmetry observed in these experiments therefore follows from the measure we propose, without any need
+to posit causal knowledge.
+Our intuitions about the relationship between two properties within
+a concept may also be influenced by our knowledge of how those same
+properties relate in other concepts within the same semantic domain. For
+instance, people might see the properties is white and eats fish as uncorrelated because they recognize that color and dietary habits do not systematically covary in most animal concepts. In contrast, the pair lives near
+the ocean and eats fish may appear correlated because habitat and dietary
+habits typically covary through multiple animal concepts. Overall, this
+suggests that conceptual coherence may be influenced by the statistical
+structure of the entire semantic domain (that is, groups of concepts) rather
+than by that of a single concept (see Billman and Dávila, 2001).
+Following a similar line of argument that sees causality as the key factor
+in coherence, Rehder (2017) and Rehder and Kim (2006, 2010) examined
+the ‘coherence effect’ in judgments of concept instances. Their findings
+suggest that people are more likely to judge an exemplar as a good category
+member if it preserves the learned causal relationships between its features,
+what Rehder and Hastie (2001) refer to as the causal laws of the concept.
+As an example, consider the concept tropical frog: Suppose people
+have learned that being poisonous (feature A) causes brightly coloured
+skin (feature B) in these frogs. Given this causal relationship, people judge
+exemplars of frogs that are not poisonous and not brightly colored (¬A¬B)
+as better category members than exemplars that are either not poisonous
+but brightly coloured or poisonous but not brightly coloured (¬AB or A¬B).
+
+PhiMiSci | Vol. 7
+
+This preference arises because ¬A¬B exemplars preserve the expected
+causal structure (“no poison, therefore no bright color”), whereas ¬AB
+and A¬B violate it, as their features do not align with the learned causal
+relationship.
+Our approach explains this effect by looking at the loadings and scores
+in the relevant PCA‑reduced conceptual space. In PCA, each principal
+component is defined by a set of loadings, i.e., weights taken from the
+eigenvectors of the covariance matrix, that quantify how strongly each
+original dimension contributes to that axis. When two dimensions share
+large, same-signed loadings, they co-vary, and the component points along
+their joint direction. The scores are the coordinates of the exemplars when
+projected onto the new axes; they show how well an exemplar aligns with
+that covariation pattern.
+When subjects learn the causal rule “poison causes brightness,” the
+dimensions encoding these two properties become strongly positively correlated in the (hypothetical) sample of frogs that learners generate from
+the rule. PCA therefore places this relation on its first component, with
+both dimensions receiving large, same-signed loadings. Exemplars that
+are both poisonous and bright (AB) are projected far along the positive
+side of the first PC, while those that are neither (¬A¬B) are projected far
+along the negative side. In contrast, mismatched cases (A¬B or ¬AB) have
+contributions that cancel out on this axis and instead receive large scores
+on an orthogonal “mismatch” component. Coherence can then be described
+in two equivalent ways: rule-consistent exemplars lie close to the first
+principal component and have large absolute scores on it, something that
+indicates a strong alignment with the main causal pattern of the concept. In
+contrast, mismatched exemplars lie farther from this axis and have scores
+closer to zero, indicating a weaker alignment with these patterns. The
+judged typicality of exemplars decreases as this alignment weakens, which
+is why AB and ¬A¬B are considered more coherent than A¬B or ¬AB.
+To be clear, we do not claim that causality is irrelevant to conceptual
+coherence. However, we believe that outside of expert knowledge, most
+causal understanding of inter-feature relations is likely shallow; for example,
+while most people recognize that the curved shape of a boomerang or the
+
+Conceptual coherence
+
+13
+
+size of a bird’s wings plays a causal role in (or are enabling conditions of)
+their respective flight patterns, few individuals really grasp the underlying
+physical mechanisms that govern these causal relationships.
+We believe that much everyday causal knowledge is acquired through
+causal generics, that is, statements like “birds fly because they have wings.”
+Although these kinds of statements only highlight causal relationships
+without accounting for the underlying mechanisms, they provide two types
+of valuable information: (1) they signal a positive pattern of co-occurrence
+between two dimensions of a concept (wings and flight tend to coexist),
+and (2) they establish an expectation of asymmetric intervention (removing
+wings eliminates flight, but inhibiting flight does not affect the presence of
+wings). In this way, they act as cognitive shortcuts which allow subjects to
+internalize both the correlation and its causal direction without needing to
+infer them from individual experience through repeated examples.
+We speculate that many folk concepts are not formed by a purely datadriven process but are structured around causal generics that establish
+the covariational structure, which is later refined by further learning. Still,
+coherence is more dependent on detecting covariation between properties
+than on an explicit understanding of causal relationships.
+In summary, while causal knowledge contributes to the perceived
+coherence of concepts, its influence is mostly limited to expert knowledge.
+In everyday reasoning (particularly for folk concepts), coherence seems to
+be guided by statistical mechanisms that identify patterns of covariation
+and plausible enabling conditions rather than by a deep understanding of
+causal relationships.
+
+4.2
+
+Coherence and induction
+
+Empirical studies consistently show a positive correlation between coherence and the confidence with which concepts are used in inductive tasks. In
+an influential study, S. A. Gelman (1988) found that children exhibit greater
+sensitivity to conceptual coherence, since they tend to make more inductive
+inferences about natural kinds than about artifact concepts. For example,
+tiger supports a wide range of inductive inferences, while clock does not,
+
+PhiMiSci | Vol. 7
+
+since different kinds of clocks share few properties beyond keeping time.
+The latter exhibits weaker correlations among its properties, meaning its
+principal component would account for less variance.
+Rehder and Hastie (2004) further showed that inductive generalizations
+tend to be more robust when they involve coherent concepts. Specifically,
+they showed that the typicality effect observed in category-based induction
+(see Osta-Vélez and Gärdenfors, 2020) can be interpreted as a coherence
+effect in the following sense: atypical members of a concept support weaker
+generalizations than more typical members because they violate the expected correlations associated with that concept.
+Our approach offers a rather straightforward explanation of the role
+of coherence in inductive inferences. Consider within-category induction,
+where we predict new properties of a categorical input from some already
+known property (for example, “x is a red apple; thus, x is sweet”). This
+form of induction clearly relies on our knowledge of correlations. The
+more coherent our categories are, the better they enable us to make such
+inductive inferences, helping us manage the uncertainty inherent in basic
+conceptual information (cf. Osta-Vélez and Gärdenfors, 2022).
+Coherence also plays a role in between-categories induction. For example,
+in category-based induction, people rely on the overall perceived similarity
+between two concepts to project a property of one to the other (Douven
+et al., 2023). However, induction is not always driven by overall similarities;
+sometimes our knowledge about covariation between properties takes
+precedence. An example of this can be found in the work of Heit and
+Rubinstein (1994), who showed that people sometimes reason relying on
+relationships between the properties of concepts rather than their overall
+similarity. For example, they found that in inductive tasks involving animal
+behavior, people judged tiger and hawk to be more similar when focusing
+on specific properties like nocturnal feeding habits than the pair chicken
+and hawk, even though the latter pair has higher overall similarity.
+In the next section, we explore how coherence influences reasoning
+about social concepts and we offer a coherence-based analysis of the conjunction fallacy.
+
+Matías Osta-Vélez & Peter Gärdenfors
+
+14
+
+5
+
+Coherence, social concepts, and the
+conjunction fallacy
+
+So far, we have sought to explain why our cognitive system strives to
+construct and prioritize coherent concepts, using natural kind concepts as
+the primary example. However, we also argue that social concepts, such as
+banker, guitarist, or feminist, are especially influenced by coherence and,
+consequently, by correlations (Patalano et al., 2006). Experimental evidence
+supports this claim. For instance, Nguyen and Chevalier (2015) discovered
+that 5-year-olds favor coherent concepts when making inductive decisions
+about social concepts. In one of their experiments, participants were told
+the following: “Baseball players like apples, and board game players like
+bananas. This is Pat. Pat is both a baseball player (coherent concept) and
+a board game player (incoherent concept).” When asked whether they
+believed Pat would prefer an apple or a banana, most chose the fruit linked
+to the coherent concept.
+Social and natural kind concepts diverge significantly in how they
+support categorization. Natural concepts typically include many observable
+and behavioral features and tend to be stable across cultural and social contexts. In contrast, social concepts involve many different kinds of features,
+ranging from observable elements to behavioral, epistemic, or ideological
+dispositions; furthermore, many of them are socially constructed and they
+tend to be less stable over time and across cultures. More importantly,
+the two kinds of concepts have different informational profiles. Natural
+concepts typically provide precise expectations about the distribution of
+properties among their exemplars and resist cross-classification at the same
+hierarchical level. Social concepts, by contrast, allow for a high degree of
+cross-classification: individuals often belong to multiple social categories
+simultaneously. Even when stereotypes are used to manage the variability
+encountered in social categorization, no single social concept exhaustively
+determines the other traits a person may have. For instance, someone categorized as a scientist can also be categorized as a musician, a parent, a
+liberal, or an introvert as social roles and personal traits overlap freely.
+This suggests that when we learn about and reason about people,
+
+PhiMiSci | Vol. 7
+
+our process resembles ‘inference learning’ (E. L. Jones and Ross, 2011;
+Yamauchi et al., 2002).9 That is, we attempt to predict which additional
+social categories an individual might belong to by drawing on our general
+knowledge of correlations and selecting those that best align with our prior
+understanding of the person. In essence, if we have certain prior knowledge
+about an individual x, we expect x to exhibit properties that are positively
+correlated with this knowledge and to lack properties that are negatively
+correlated with it.
+This idea offers a straightforward explanation of the conjunction fallacy
+from a coherentist perspective. In their well-known experiment, Tversky
+and Kahneman (1983) presented participants with a description of Linda, a
+31-year-old woman who was single, outspoken, highly intelligent, and a
+philosophy major. As a student, she was deeply engaged in issues of discrimination and social justice and participated in anti-nuclear demonstrations.
+Participants were then asked to assess the likelihood of two scenarios:
+1. Linda being a bank teller
+2. Linda being both a bank teller and a feminist.
+Despite the probability law stating that the likelihood of two events occurring together is always less than or equal to the probability of either event
+occurring alone, most participants chose the latter scenario, demonstrating
+a ‘conjunction fallacy.’
+From our perspective, this fallacy happens because the property of
+being a feminist is strongly correlated with the set of attributes previously
+described about Linda. The scenario of Linda as a feminist bank teller
+increases the coherence of our concept of Linda compared to merely being
+a bank teller. In other words, if our cognitive system favors conceptual
+coherence, it is more reasonable to predict that Linda is a feminist bank
+teller, as this classification is consistent with the provided information.
+By contrast, categorizing her as only a bank teller introduces uncertainty
+about additional properties she might have, particularly those positively
+9
+
+Inference learning is often contrasted to ‘classification learning,’ which consists of
+predicting a concept label by identifying diagnostic features of exemplars.
+
+Conceptual coherence
+
+15
+
+correlated with being a bank teller (e.g., not being a feminist) but negatively
+correlated with our prior knowledge of Linda. In other words, people, driven
+by an inclination toward coherence, rely on clusters of covarying attributes
+when forming conceptual representations. As a result, they may override
+statistical reasoning to construct a more internally consistent image of
+Linda based upon the given description.
+A similar approach to the one we are proposing was developed by
+Siebel (2002), who builds on Thagard’s coherence model (see also Trpin and
+Hartmann, 2024). An interesting aspect of Siebel’s analysis is that he links
+coherence (from the perspective of classical epistemology10 ) to inference
+and then to explanation. According to Siebel, people judge Linda as a
+feminist bank teller because this classification establishes more ‘inferential
+connections’ with the prior information about her, thereby enhancing our
+ability to generate explanations of her characteristics. From our perspective,
+Siebel’s observation is broadly correct; however, we think that what explains
+the differing explanatory scopes of the two alternatives in the task is the
+fact that one maximizes coherence while the other does not. In other words,
+facts about coherence are explanatorily prior to facts about the explanatory
+power when analyzing the cognitive basis of the conjunction fallacy.
+Interestingly enough, experimental evidence on the cross-classification
+of people and induction supports the previous ideas (Patalano et al., 2003;
+Patalano et al., 2006). People exhibit a strong preference for using highcoherence concepts as a basis for explaining people’s features, even when
+doing so leads them to violate the laws of probability. This aligns with our
+interpretation of the conjunction fallacy as a product of a preference for
+coherent representations, rather than necessarily a reasoning error. As Hertwig and Gigerenzer (1999) propose, certain inferences can be ecologically
+rational even when they go against the abstract principles of logic and
+probability. More broadly, there appear to be strong reasons to incorporate ecological and adaptive considerations into the normative frameworks
+10
+
+Siebel follows Bonjour in this regard: The coherence of a system of beliefs is
+diminished to the extent to which it is divided into subsystems of beliefs which
+are relatively unconnected to each other by inferential connections (Bonjour, 1985,
+p. 98).
+
+PhiMiSci | Vol. 7
+
+of cognitive psychology, since very abstract frameworks may lead us to
+dismiss theoretically interesting phenomena as mere errors.
+
+6
+
+Conclusion
+
+In this paper, we propose a formal framework for analyzing conceptual
+coherence and a method for quantifying it. We argued that coherence reflects the compressibility of the covariational structure of concepts (i.e., the
+clusters of properties that systematically co-occur across category exemplars) such that more coherent concepts can be compressed into simpler
+dimensional structures.
+Our proposal contributes to the discussion of concepts in several ways.
+First, it clarifies the relationship between coherence and inductive reasoning. Second, it bridges rival theories of conceptual structure by showing
+how a similarity-centered view can account (at least partially) for the role
+of causal knowledge in the coherence of concepts. In addition, as we explain in Section 4.1, our approach can account for theory-like phenomena
+without committing to the existence of innate intuitive theories and, in this
+sense, we believe it has an advantage over the theory-theory view when it
+comes to explaining coherence. Third, it offers a computationally tractable
+model that could be applied in cognitive science, artificial intelligence, and
+semantic modeling.
+This model also accounts for different empirical findings in categorization and reasoning. It explains why natural concepts exhibit stronger
+coherence than artifacts; why concepts with tightly interrelated features
+are easier to learn; and why social concepts influence probabilistic reasoning, particularly in cases such as the conjunction fallacy. Our model
+provides a principled explanation for these phenomena by linking coherence to underlying statistical structures rather than treating it as a primitive
+notion.
+Additionally, our theory yields a series of predictions and opens some
+new lines of inquiry. One prediction is that a non-convex concept with
+
+16
+
+Matías Osta-Vélez & Peter Gärdenfors
+
+instances drawn from disjoint regions of a conceptual space will be incoherent because the first principal component would capture the between-group
+separation rather than within-group covariance and, as a consequence, no
+single principal component would dominate the analysis of variance.
+A second prediction, mentioned in Section 4.1, is that exemplars of
+a concept judged as ‘typical’ should obtain high scores in the PCA space
+because they tend to align with the concept’s most significant covariation
+patterns. Conversely, atypical exemplars should obtain lower scores as they
+fail to align with these patterns. In other words, our model provides tools
+to explain typicality effects in terms of data compressibility.
+A third prediction is that if a new dimension (domain) that correlates
+with the first principal component(s) is added to the representation of a
+concept, then the overall coherence of the concept is strengthened. An
+example of this is the emergence of the notion of “gene” and its impact on
+the coherence of the concept living thing.
+Future research could focus on the relationship between coherence and
+psychological essentialism, that is, the tendency to believe that categories
+possess hidden essences. The experimental literature on essentialism provides robust evidence that our essentialist intuitions are associated with the
+identification of clusters of co-varying properties (S. A. Gelman, 2003). If
+we assume that a process akin to PCA underlies our conceptual processing,
+then it would be reasonable to hypothesize that essences correspond to
+the principal component(s) of a concept (Gärdenfors and Osta-Vélez, 2026).
+Further investigations of this idea could provide deeper insights into how
+people perceive conceptual structure and form inductive generalizations.
+Finally, we should note that there are methods similar to PCA that may
+be equally or even better suited for quantifying coherence. For instance,
+Mixed-Variable Factor Analysis or Multiple Correspondence Analysis could
+be useful for analyzing concepts that involve both continuous and discrete dimensions (Chavent et al., 2022). Future work could focus on these
+methodological aspects, which, due to space constraints, have been relatively sidelined in the present paper.
+
+PhiMiSci | Vol. 7
+
+References
+Ahn, W.-K., Marsh, J. K., Luhmann, C. C., & Lee, K. (2002). Effect of theory-based
+feature correlations on typicality judgments. Memory & Cognition, 30(1), 107–118.
+https://doi.org/10.3758/BF03195270
+Barsalou, L. W. (1983). Ad hoc categories. Memory & Cognition, 11(3), 211–227. https:
+//doi.org/10.3758/BF03196968
+Bellman, R. (1961). Dynamic programming. Princeton University Press.
+Billman, D., & Dávila, D. (2001). Consistent contrast aids concept learning. Memory &
+Cognition, 29(7), 1022–1035. https://doi.org/10.3758/BF03195764
+Billman, D., & Knutson, J. (1996). Unsupervised concept learning and value systematicity: A complex whole aids learning the parts. Journal of Experimental Psychology:
+Learning, Memory, and Cognition, 22(2), 458–475. https://doi.org/10.1037/02787393.22.2.458
+Bonjour, L. (1985). The structure of empirical knowledge. Harvard University Press.
+Brandone, A. C. (2017). Changes in beliefs about category homogeneity and variability
+across childhood. Child Development, 88(3), 846–866. https://doi.org/10.1111/
+cdev.12616
+Brandone, A. C., & Gelman, S. A. (2009). Differences in preschoolers’ and adults’
+use of generics about novel animals and artifacts: A window onto a conceptual
+divide. Cognition, 110(1), 1–22. https://doi.org/10.1016/j.cognition.2008.08.005
+Chater, N., & Vitányi, P. (2003). Simplicity: A unifying principle in cognitive science?
+Trends in Cognitive Sciences, 7 (1), 19–22. https://doi.org/10.1016/S1364-6613(02)
+00005-0
+Chavent, M., Kuentz, V., Labenne, A., & Saracco, J. (2022). Multivariate analysis of
+mixed data. the R package PCAmixdata. Electronic Journal of Applied Statistical
+Analysis, 15(3), 606–645. https://doi.org/10.1285/i20705948v15n3p606
+Corter, J. E., & Gluck, M. A. (1992). Explaining basic categories: Feature predictability
+and information. Psychological Bulletin, 111, 291–303. https://doi.org/10.1037/
+0033-2909.111.2.291
+Douven, I., & Meijs, W. (2007). Measuring coherence. Synthese, 156(3), 405–425. https:
+//doi.org/10.1007/s11229-006-9131-z
+Douven, I., Verheyen, S., Elqayam, S., Gärdenfors, P., & Osta-Vélez, M. (2023).
+Similarity-based reasoning in conceptual spaces. Frontiers in Psychology, 14,
+1130979. https://doi.org/10.3389/fpsyg.2023.1234483
+Edelman, S., & Intrator, N. (1997). Learning as extraction of low-dimensional representations. In Psychology of learning and motivation (pp. 353–380, Vol. 36). Academic
+Press.
+
+17
+
+Conceptual coherence
+
+Égré, P., Spector, B., Mortier, A., & Verheyen, S. (2023). On the optimality of vagueness:
+“around”, “between” and the Gricean maxims. Linguistics and Philosophy, 46(5),
+1075–1130. https://doi.org/10.1007/s10988-022-09379-6
+Gärdenfors, P. (2000). Conceptual spaces. MIT Press.
+Gärdenfors, P. (2014). The geometry of meaning: Semantics based on conceptual spaces.
+MIT Press.
+Gärdenfors, P., & Osta-Vélez, M. (2026). Reasoning with concepts: Conceptual spaces as
+a framework. MIT Press.
+Gelman, R., & Williams, E. M. (1998). Enabling constraints for cognitive development
+and learning: Domain specificity and epigenesis. In D. Kuhn & R. S. Siegler
+(Eds.), Handbook of child psychology: Vol. 2. cognition, perception, and language
+(pp. 575–630). John Wiley & Sons Inc.
+Gelman, S. A. (1988). The development of induction within natural kind and artifact
+categories. Cognitive Psychology, 20(1), 65–95. https://doi.org/10.1016/00100285(88)90025-4
+Gelman, S. A. (2003). The essential child: Origins of essentialism in everyday thought.
+Oxford University Press.
+Goodman, N. (1983). Fact, fiction, and forecast. Harvard University Press.
+Gopnik, A., & Meltzoff, A. N. (1997). Words, thoughts, and theories. MIT Press.
+Hartmann, S., & Trpin, B. (2026). Coherence-based measures of explanatory power.
+Philosophical Studies, 183(6), 1817–1843. https://doi.org/10.1007/s11098-02602517-x
+Haslam, N., Rothschild, L., & Ernst, D. (2000). Essentialist beliefs about social categories. British Journal of Social Psychology, 39(1), 113–127. https://doi.org/10.
+1348/014466600164363
+Hayes, B. K., Taplin, J. E., & Munro, K. I. (1996). Prior knowledge and sensitivity to
+feature correlations in category acquisition. Australian Journal of Psychology,
+48(1), 27–34. https://doi.org/10.1080/09541440143000177
+Heit, E., & Rubinstein, J. (1994). Similarity and property effects in inductive reasoning.
+Journal of Experimental Psychology: Learning, Memory, and Cognition, 20(2), 411–
+422. https://doi.org/10.1037/0278-7393.20.2.411
+Hertwig, R., & Gigerenzer, G. (1999). The “conjunction fallacy” revisited: How intelligent inferences look like reasoning errors. Journal of Behavioral Decision Making,
+12(4), 275–305. https://doi.org/10.1002/(SICI)1099-0771(199912)12:4<275::AIDBDM323>3.0.CO;2-M
+Holland, J. H., Holyoak, K. J., Nisbett, R. E., & Thagard, P. R. (1986). Induction: Processes
+of inference, learning, and discovery. MIT Press.
+Johannesson, M. (2002). Geometric models of similarity [Doctoral dissertation, Lund
+University].
+Jolliffe, I. T. (2002). Principal component analysis. Springer.
+
+PhiMiSci | Vol. 7
+
+Jones, E. L., & Ross, B. H. (2011). Classification versus inference learning contrasted
+with real-world categories. Memory & Cognition, 39(5), 764–777. https://doi.org/
+10.3758/s13421-010-0058-8
+Jones, M., & Goldstone, R. L. (2013). The structure of integral dimensions: Contrasting
+topological and Cartesian representations. Journal of Experimental Psychology:
+Human Perception and Performance, 39(1), 111–132. https://doi.org/10.1037/
+a0029059
+Kerrén, C., Reznik, D., Doeller, C. F., & Griffiths, B. J. (2025). Exploring the role of
+dimensionality transformation in episodic memory. Trends in Cognitive Sciences,
+29(7), 614–626. https://doi.org/10.1016/j.tics.2025.01.007
+Kornblith, H. (1993). Inductive inference and its natural ground. MIT Press.
+Lassaline, M. E., & Murphy, G. L. (1996). Induction and category coherence. Psychonomic Bulletin & Review, 3(1), 95–99. https://doi.org/10.3758/BF03210747
+Malt, B. C., & Smith, E. E. (1984). Correlated properties in natural categories. Journal of
+Verbal Learning and Verbal Behavior, 23(2), 250–269. https://doi.org/10.1016/S00225371(84)90170-1
+Martínez, M. (2024). The information-processing perspective on categorization. Cognitive Science, 48(2), e13411. https://doi.org/10.1111/cogs.13411
+Medin, D. L., & Wattenmaker, W. D. (1987). Category cohesiveness, theories, and
+cognitive archeology. In U. Neisser (Ed.), Concepts and conceptual development:
+Ecological and intellectual factors in categorization (pp. 25–62). Cambridge University Press.
+Murphy, G. L., & Medin, D. L. (1985). The role of theories in conceptual coherence.
+Psychological Review, 92(3), 289–316. https://doi.org/10.1037/0033-295X.92.3.289
+Murphy, G. L., & Wisniewski, E. J. (1989). Feature correlations in conceptual representations. In G. Tiberghien (Ed.), Advances in cognitive science, Vol. 2: Theory
+and applications (pp. 23–45). Ellis Horwood.
+Nguyen, S. P., & Chevalier, T. (2015). Category coherence in children’s inductive
+inferences with cross-classified entities. Cognitive Development, 35, 137–150.
+https://doi.org/10.1016/j.cogdev.2015.05.001
+Osta-Vélez, M., & Gärdenfors, P. (2020). Category-based induction in conceptual
+spaces. Journal of Mathematical Psychology, 96, 102357. https://doi.org/10.1016/j.
+jmp.2020.102357
+Osta-Vélez, M., & Gärdenfors, P. (2022). Nonmonotonic reasoning, expectations orderings, and conceptual spaces. Journal of Logic, Language and Information, 31(1),
+77–97. https://doi.org/10.1007/s10849-021-09347-6
+Osta-Vélez, M., & Gärdenfors, P. (2026). Inductive biases and the geometry of concept
+learning. https://doi.org/10.31234/osf.io/t2pz6_v1
+
+18
+
+Matías Osta-Vélez & Peter Gärdenfors
+
+Patalano, A. L., Chin-Parker, S., & Ross, B. H. (2003). The role of coherence in categorybased explanation. Proceedings of the 25th Annual Meeting of the Cognitive Science
+Society, 910–915.
+Patalano, A. L., Chin-Parker, S., & Ross, B. H. (2006). The importance of being coherent:
+Category coherence, cross-classification, and reasoning. Journal of Memory and
+Language, 54(3), 407–424. https://doi.org/10.1016/j.jml.2005.10.005
+Patalano, A. L., Wengrovitz, S. M., & Sharpes, K. M. (2009). The influence of category
+coherence on inference about cross-classified entities. Memory & Cognition, 37 (1),
+21–28. https://doi.org/10.3758/MC.37.1.21
+Rehder, B. (2017). Concepts as causal models: Categorization. In M. R. Waldmann
+(Ed.), The Oxford handbook of causal reasoning (pp. 347–376). Oxford University
+Press.
+Rehder, B., & Hastie, R. (2001). Causal knowledge and categories: The effects of
+causal beliefs on categorization, induction, and similarity. Journal of Experimental
+Psychology: General, 130(3), 323–360. https://doi.org/10.1037/0096-3445.130.3.323
+Rehder, B., & Hastie, R. (2004). Category coherence and category-based property
+induction. Cognition, 91(2), 113–153. https://doi.org/10.1016/S0010-0277(03)001677
+Rehder, B., & Kim, S. (2006). How causal knowledge affects classification: A generative
+theory of categorization. Journal of Experimental Psychology: Learning, Memory,
+and Cognition, 32(4), 659–683. https://doi.org/10.1037/0278-7393.32.4.659
+Rehder, B., & Kim, S. (2010). Causal status and coherence in causal-based categorization. Journal of Experimental Psychology: Learning, Memory, and Cognition, 36(5),
+1171–1206. https://doi.org/10.1037/a0019765
+Rogers, T. T., & McClelland, J. L. (2004). Semantic cognition: A parallel distributed
+processing approach. MIT Press.
+Rosch, E. (1975). Cognitive representations of semantic categories. Journal of Experimental Psychology: General, 104(3), 192–233. https://doi.org/10.1037/00963445.104.3.192
+Rosch, E., & Mervis, C. B. (1975). Family resemblances: Studies in the internal structure
+of categories. Cognitive Psychology, 7 (4), 573–605. https://doi.org/10.1016/00100285(75)90024-9
+Shepard, R. N. (1964). Attention and the metric structure of the stimulus space. Journal
+of Mathematical Psychology, 1(1), 54–87. https://doi.org/10.1016/0022-2496(64)
+90017-3
+Shipley, E. F. (1993). Categories, hierarchies, and induction. In D. L. Medin (Ed.),
+Psychology of learning and motivation (pp. 265–301, Vol. 30). Academic Press.
+Siebel, M. (2002). There’s something about Linda: Probability, coherence and rationality. Proceedings of the First Salzburg Workshop on Paradigms of Cognition.
+
+PhiMiSci | Vol. 7
+
+Slaughter, V., & Gopnik, A. (1996). Conceptual coherence in the child’s theory of
+mind: Training children to understand belief. Child Development, 67 (6), 2967–
+2988. https://doi.org/10.1111/j.1467-8624.1996.tb01898.x
+Sloman, S. A., & Lagnado, D. A. (2005). The problem of induction. In K. J. Holyoak
+& R. G. Morrison (Eds.), The Cambridge handbook of thinking and reasoning
+(pp. 95–116). Cambridge University Press.
+Sloutsky, V. M. (2003). The role of similarity in the development of categorization.
+Trends in Cognitive Sciences, 7 (6), 246–251. https : / / doi . org / 10 . 1016 / s1364 6613(03)00109-8
+Thagard, P. (2002). Coherence in thought and action. MIT Press.
+Thagard, P., Eliasmith, C., Rusnock, P., & Shelley, C. P. (2002). Knowledge and coherence. In R. Elio (Ed.), Common sense, reasoning, and rationality (pp. 104–131).
+Oxford University Press.
+Thagard, P., & Nisbett, R. E. (1982). Variability and confirmation. Philosophical Studies,
+42(3), 379–394. https://doi.org/10.1007/bf00714369
+Trpin, B., & Hartmann, S. (2024). Explaining the conjunction fallacy. Proceedings of
+the 46th Annual Meeting of the Cognitive Science Society. https://escholarship.org/
+uc/item/4bv1k9nw
+Turnbull, M. G. (2018). Underdetermination in science: What it is and why we should
+care. Philosophy Compass, 13(2), e12475. https://doi.org/10.1111/phc3.12475
+Tversky, A., & Kahneman, D. (1983). Extensional versus intuitive reasoning: The
+conjunction fallacy in probability judgment. Psychological Review, 90(4), 293–315.
+https://doi.org/10.1037/0033-295X.90.4.293
+Wittgenstein, L. (2009). Philosophical investigations (G. E. M. Anscombe, P. M. S.
+Hacker, & J. Schulte, Trans.; 4th). Wiley-Blackwell.
+Yamauchi, T., Love, B. C., & Markman, A. B. (2002). Learning nonlinearly separable
+categories by inference and classification. Journal of Experimental Psychology:
+Learning, Memory, and Cognition, 28(3), 585–593. https://doi.org/10.1037/02787393.28.3.585
+Younger, B. A. (1990). Infants’ detection of correlations among feature categories.
+Child Development, 61(3), 614–620. https://doi.org/10.2307/1130948
+
+19
+
+Conceptual coherence
+
+

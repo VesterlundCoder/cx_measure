@@ -1,0 +1,486 @@
+{
+  "H1_natural_vs_artifact": {
+    "C_univ_sal": {
+      "mean_natural": 0.3198093944170559,
+      "mean_artifact": 0.3421538577063185,
+      "diff": -0.022344463289262595,
+      "p_perm": 0.42857142857142855
+    },
+    "C_own_sal": {
+      "mean_natural": 0.20305527929625972,
+      "mean_artifact": 0.18758608416400355,
+      "diff": 0.01546919513225617,
+      "p_perm": 0.5064935064935064
+    },
+    "C_univ_uni": {
+      "mean_natural": 0.2786452048107749,
+      "mean_artifact": 0.28128181617265946,
+      "diff": -0.0026366113618845333,
+      "p_perm": 0.9025974025974026
+    },
+    "C_own_uni": {
+      "mean_natural": 0.19479905188844968,
+      "mean_artifact": 0.16723215311057393,
+      "diff": 0.027566898777875742,
+      "p_perm": 0.2554112554112554
+    },
+    "C_univ_fullspace": {
+      "mean_natural": 0.29215582967888815,
+      "mean_artifact": 0.2871275408931169,
+      "diff": 0.005028288785771273,
+      "p_perm": 0.8744588744588745
+    },
+    "C_own_fullspace": {
+      "mean_natural": 0.19704729968879753,
+      "mean_artifact": 0.16500978797558707,
+      "diff": 0.032037511713210454,
+      "p_perm": 0.21212121212121213
+    },
+    "C_univ_sal_n20": {
+      "mean_natural": 0.3241298803336744,
+      "mean_artifact": 0.3469682744010542,
+      "diff": -0.022838394067379808,
+      "p_perm": 0.38961038961038963
+    },
+    "C_own_sal_n20": {
+      "mean_natural": 0.2124245295488143,
+      "mean_artifact": 0.19931315436652008,
+      "diff": 0.013111375182294216,
+      "p_perm": 0.5086580086580087
+    },
+    "dist_share": {
+      "mean_natural": 0.5305332618569644,
+      "mean_artifact": 0.5672262879791639,
+      "diff": -0.03669302612219949,
+      "p_perm": 0.5844155844155844
+    },
+    "fam_res": {
+      "mean_natural": 0.7986540227243556,
+      "mean_artifact": 0.7495393269537535,
+      "diff": 0.049114695770602124,
+      "p_perm": 0.12337662337662338
+    },
+    "human_sim": {
+      "mean_natural": 0.44857288056382494,
+      "mean_artifact": 0.302044163615196,
+      "diff": 0.14652871694862896,
+      "p_perm": 0.004329004329004329
+    },
+    "C_univ_sal_r0.3": {
+      "mean_natural": 0.4171888985116203,
+      "mean_artifact": 0.45644831170135425,
+      "diff": -0.03925941318973397,
+      "p_perm": 0.3593073593073593
+    },
+    "C_univ_sal_r0.5": {
+      "mean_natural": 0.3198093944170559,
+      "mean_artifact": 0.3421538577063185,
+      "diff": -0.022344463289262595,
+      "p_perm": 0.42857142857142855
+    },
+    "C_univ_sal_r0.7": {
+      "mean_natural": 0.2119044845386417,
+      "mean_artifact": 0.2209076667192169,
+      "diff": -0.00900318218057522,
+      "p_perm": 0.5324675324675324
+    },
+    "C_univ_sal_r0.9": {
+      "mean_natural": 0.08386967644991712,
+      "mean_artifact": 0.08490081285619912,
+      "diff": -0.001031136406281996,
+      "p_perm": 0.7424242424242424
+    }
+  },
+  "H2_superordinate": {
+    "animal": {
+      "superordinate_C": 0.14545459169352648,
+      "sub_C_univ": {
+        "bird": 0.27514771626777856,
+        "fish": 0.36529985599674236,
+        "insect": 0.3147945129782261,
+        "mammal": 0.2187315527996052,
+        "reptile": 0.2868055103520886
+      },
+      "sub_C_own": {
+        "bird": 0.15631602124194638,
+        "fish": 0.26398751844015356,
+        "insect": 0.16994164774400042,
+        "mammal": 0.16053454050462396,
+        "reptile": 0.23445677051326339
+      },
+      "n_sub_above_univ": 5,
+      "n_sub_above_own": 5,
+      "n_sub": 5,
+      "random_mix_C_mean": 0.17356836181838595,
+      "random_mix_C_95": [
+        0.14940925533229418,
+        0.20343488472088841
+      ]
+    },
+    "artifact": {
+      "superordinate_C": 0.1376127902308777,
+      "sub_C_univ": {
+        "clothing": 0.33112152379744714,
+        "kitchen_utensil": 0.22049764922028792,
+        "musical_instrument": 0.3299762104727683,
+        "tool": 0.270702552956704,
+        "vehicle": 0.2865593078278576,
+        "weapon": 0.28390800108363606
+      },
+      "sub_C_own": {
+        "clothing": 0.1304979597355062,
+        "kitchen_utensil": 0.16682649509332884,
+        "musical_instrument": 0.1652063943297806,
+        "tool": 0.14396839689672858,
+        "vehicle": 0.18255491450011518,
+        "weapon": 0.201004567298063
+      },
+      "n_sub_above_univ": 6,
+      "n_sub_above_own": 5,
+      "n_sub": 6,
+      "random_mix_C_mean": 0.16577052869189277,
+      "random_mix_C_95": [
+        0.14585917050870317,
+        0.19063106888513326
+      ]
+    },
+    "size_matched": {
+      "bird": {
+        "n": 30,
+        "real_own": 0.15631602124194638,
+        "null_own_mean": 0.17004730273635954,
+        "pct_own": 0.128,
+        "real_univ": 0.27514771626777856,
+        "null_univ_mean": 0.16890206193349447,
+        "pct_univ": 1.0
+      },
+      "fish": {
+        "n": 23,
+        "real_own": 0.26398751844015356,
+        "null_own_mean": 0.17858537952472142,
+        "pct_own": 1.0,
+        "real_univ": 0.36529985599674236,
+        "null_univ_mean": 0.1769364018680987,
+        "pct_univ": 1.0
+      },
+      "insect": {
+        "n": 26,
+        "real_own": 0.16994164774400042,
+        "null_own_mean": 0.17412352519136692,
+        "pct_own": 0.38,
+        "real_univ": 0.3147945129782261,
+        "null_univ_mean": 0.17283236395687898,
+        "pct_univ": 1.0
+      },
+      "mammal": {
+        "n": 30,
+        "real_own": 0.16053454050462396,
+        "null_own_mean": 0.16910785133017872,
+        "pct_own": 0.226,
+        "real_univ": 0.2187315527996052,
+        "null_univ_mean": 0.1680264185821362,
+        "pct_univ": 1.0
+      },
+      "reptile": {
+        "n": 20,
+        "real_own": 0.23445677051326339,
+        "null_own_mean": 0.18278034771067087,
+        "pct_own": 1.0,
+        "real_univ": 0.2868055103520886,
+        "null_univ_mean": 0.18038329062232303,
+        "pct_univ": 1.0
+      },
+      "clothing": {
+        "n": 29,
+        "real_own": 0.1304979597355062,
+        "null_own_mean": 0.16633298760531018,
+        "pct_own": 0.0,
+        "real_univ": 0.33112152379744714,
+        "null_univ_mean": 0.16523259185331063,
+        "pct_univ": 1.0
+      },
+      "kitchen_utensil": {
+        "n": 33,
+        "real_own": 0.16682649509332884,
+        "null_own_mean": 0.16391122864896454,
+        "pct_own": 0.594,
+        "real_univ": 0.22049764922028792,
+        "null_univ_mean": 0.16296229573000054,
+        "pct_univ": 1.0
+      },
+      "musical_instrument": {
+        "n": 27,
+        "real_own": 0.1652063943297806,
+        "null_own_mean": 0.1693152395118676,
+        "pct_own": 0.396,
+        "real_univ": 0.3299762104727683,
+        "null_univ_mean": 0.16780852364516938,
+        "pct_univ": 1.0
+      },
+      "tool": {
+        "n": 30,
+        "real_own": 0.14396839689672858,
+        "null_own_mean": 0.16585694550398625,
+        "pct_own": 0.022,
+        "real_univ": 0.270702552956704,
+        "null_univ_mean": 0.1647808176227595,
+        "pct_univ": 1.0
+      },
+      "vehicle": {
+        "n": 30,
+        "real_own": 0.18255491450011518,
+        "null_own_mean": 0.16490333487118652,
+        "pct_own": 0.93,
+        "real_univ": 0.2865593078278576,
+        "null_univ_mean": 0.1639235823659228,
+        "pct_univ": 1.0
+      },
+      "weapon": {
+        "n": 20,
+        "real_own": 0.201004567298063,
+        "null_own_mean": 0.18010702903000494,
+        "pct_own": 0.896,
+        "real_univ": 0.28390800108363606,
+        "null_univ_mean": 0.17756459773740743,
+        "pct_univ": 1.0
+      }
+    }
+  },
+  "H3_category_level": {
+    "11_domain_categories:C_univ_sal": {
+      "rho": -0.11818181818181818,
+      "p": 0.7292847795197801,
+      "n": 11
+    },
+    "11_domain_categories:C_own_sal": {
+      "rho": 0.41818181818181827,
+      "p": 0.20057021703405048,
+      "n": 11
+    },
+    "11_domain_categories:C_univ_uni": {
+      "rho": 0.07272727272727274,
+      "p": 0.831716405381337,
+      "n": 11
+    },
+    "11_domain_categories:C_own_uni": {
+      "rho": 0.5,
+      "p": 0.11730680301423817,
+      "n": 11
+    },
+    "11_domain_categories:C_univ_fullspace": {
+      "rho": 0.21818181818181823,
+      "p": 0.5192482475549817,
+      "n": 11
+    },
+    "11_domain_categories:dist_share": {
+      "rho": -0.15454545454545454,
+      "p": 0.6500339654975799,
+      "n": 11
+    },
+    "11_domain_categories:fam_res": {
+      "rho": 0.2545454545454546,
+      "p": 0.45003657688882837,
+      "n": 11
+    },
+    "11_domain_categories:C_own_sal_catmat": {
+      "rho": 0.48181818181818187,
+      "p": 0.13343383825682875,
+      "n": 11
+    },
+    "11_domain_categories:fam_res_catmat": {
+      "rho": 0.29090909090909095,
+      "p": 0.3854569696913654,
+      "n": 11
+    },
+    "11_domain_categories:C_univ_sal_n20": {
+      "rho": -0.20909090909090913,
+      "p": 0.5372209352113227,
+      "n": 11
+    },
+    "11_domain_categories:C_own_sal_n20": {
+      "rho": 0.46363636363636374,
+      "p": 0.15090149929248592,
+      "n": 11
+    },
+    "all_15:C_own_uni": {
+      "rho": 0.5178571428571428,
+      "p": 0.04800407736655831,
+      "n": 15
+    },
+    "all_15:fam_res": {
+      "rho": 0.22142857142857136,
+      "p": 0.42771371901637,
+      "n": 15
+    },
+    "all_15:C_own_sal_catmat": {
+      "rho": 0.44999999999999996,
+      "p": 0.09235737494812248,
+      "n": 15
+    },
+    "all_15:fam_res_catmat": {
+      "rho": 0.24285714285714283,
+      "p": 0.38312834183934164,
+      "n": 15
+    },
+    "partial|fam_res:C_own_sal": {
+      "r": 0.4324255657551934,
+      "p": 0.18407492746209508,
+      "n": 11
+    },
+    "partial|fam_res:C_univ_sal": {
+      "r": -0.20163706926270633,
+      "p": 0.5521454068968961,
+      "n": 11
+    },
+    "partial|fam_res:C_own_sal_catmat": {
+      "r": 0.4675120118797428,
+      "p": 0.07888082008075975,
+      "n": 15
+    },
+    "C_univ_sal_vs_dist_share": {
+      "rho": 0.9272727272727275,
+      "p": 3.973774256558546e-05,
+      "n": 11
+    },
+    "C_own_sal_vs_dist_share": {
+      "rho": 0.20909090909090913,
+      "p": 0.5372209352113227,
+      "n": 11
+    },
+    "r_robustness": {
+      "0.3": {
+        "univ_vs_humansim": -0.20909090909090913,
+        "own_vs_humansim": 0.41818181818181827,
+        "univ_vs_distshare": 0.9363636363636365
+      },
+      "0.5": {
+        "univ_vs_humansim": -0.11818181818181818,
+        "own_vs_humansim": 0.41818181818181827,
+        "univ_vs_distshare": 0.9272727272727275
+      },
+      "0.7": {
+        "univ_vs_humansim": -0.10909090909090911,
+        "own_vs_humansim": 0.48181818181818187,
+        "univ_vs_distshare": 0.9
+      },
+      "0.9": {
+        "univ_vs_humansim": 0.009090909090909092,
+        "own_vs_humansim": 0.5636363636363637,
+        "univ_vs_distshare": 0.8363636363636365
+      }
+    }
+  },
+  "H4_typicality": {
+    "PC1_score_univ": {
+      "mean_rho": 0.7159667508563475,
+      "n_cats": 11,
+      "n_positive": 11,
+      "wilcoxon_p": 0.0009765625
+    },
+    "PC1_absscore_own": {
+      "mean_rho": 0.0568621845194869,
+      "n_cats": 15,
+      "n_positive": 9,
+      "wilcoxon_p": 0.803955078125
+    },
+    "PC1_alignment_own": {
+      "mean_rho": 0.07863616841887312,
+      "n_cats": 15,
+      "n_positive": 9,
+      "wilcoxon_p": 0.389404296875
+    },
+    "family_resemblance_RM": {
+      "mean_rho": 0.6856400003918889,
+      "n_cats": 15,
+      "n_positive": 15,
+      "wilcoxon_p": 0.0006533107814151376
+    },
+    "prototype_cosine_unweighted": {
+      "mean_rho": 0.46919162241712326,
+      "n_cats": 15,
+      "n_positive": 13,
+      "wilcoxon_p": 0.00042724609375
+    },
+    "contrast_proj_on_m": {
+      "mean_rho": 0.7180815231964218,
+      "n_cats": 11,
+      "n_positive": 11,
+      "wilcoxon_p": 0.0009765625
+    },
+    "prototype_cosine": {
+      "mean_rho": 0.4226193108502777,
+      "n_cats": 15,
+      "n_positive": 13,
+      "wilcoxon_p": 0.00335693359375
+    },
+    "human_sim_to_others": {
+      "mean_rho": 0.5177253696319437,
+      "n_cats": 15,
+      "n_positive": 15,
+      "wilcoxon_p": 6.103515625e-05
+    },
+    "PC1_univ_minus_prototype": {
+      "mean_diff": 0.29289772525519014,
+      "n_PC1_better": 10,
+      "n": 11
+    },
+    "cos_PC1_m_mean": 0.9960969918715943,
+    "rho_PC1univ_contrast_mean": 0.9930532552113687,
+    "PC1_univ_minus_contrast": {
+      "mean_diff": -0.0035326690223248173,
+      "n_PC1_better": 5,
+      "n": 11
+    }
+  },
+  "McRae_H1": {
+    "C_univ": {
+      "diff": 0.014069383775582811,
+      "p_perm": 0.7142857142857143,
+      "mean_natural": 0.20815049893948112,
+      "mean_artifact": 0.1940811151638983
+    },
+    "C_own": {
+      "diff": -0.04374835936353784,
+      "p_perm": 0.14285714285714285,
+      "mean_natural": 0.12362635365567197,
+      "mean_artifact": 0.1673747130192098
+    },
+    "C_univ_fullspace": {
+      "diff": 0.014606871912628827,
+      "p_perm": 0.7321428571428571,
+      "mean_natural": 0.21286505675131706,
+      "mean_artifact": 0.19825818483868823
+    },
+    "C_own_fullspace": {
+      "diff": -0.04374835936353787,
+      "p_perm": 0.14285714285714285,
+      "mean_natural": 0.12362635365567191,
+      "mean_artifact": 0.16737471301920978
+    },
+    "dist_share": {
+      "diff": 0.07298725434639486,
+      "p_perm": 0.4107142857142857,
+      "mean_natural": 0.29720451136560927,
+      "mean_artifact": 0.2242172570192144
+    }
+  },
+  "McRae_H2": {
+    "superordinate_animals_C": 0.11101681939496771,
+    "thing_all541_C": 0.034379067911550126,
+    "sub_C_univ_fullspace": {
+      "mammal": 0.12287126043918006,
+      "bird": 0.2260541996556886,
+      "fish": 0.28966971015908244
+    },
+    "sub_C_own_fullspace": {
+      "mammal": 0.08881501798765477,
+      "bird": 0.10492112679623725,
+      "fish": 0.17714291618312375
+    }
+  },
+  "McRae_C_univ_vs_dist_share": {
+    "rho": 0.9393939393939393,
+    "p": 5.4840529985136686e-05,
+    "n": 10
+  }
+}
